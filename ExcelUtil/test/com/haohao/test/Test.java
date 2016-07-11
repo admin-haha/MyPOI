@@ -16,7 +16,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 
-import com.haohao.ExcelUtil.ExportExcelFromObject;
+import com.haohao.ExcelUtil.ExportExcelFromObject2;
 import com.haohao.ExcelUtil.ImportExcelToObject;
 import com.haohao.bean.Child;
 import com.haohao.bean.Et0Need;
@@ -45,7 +45,7 @@ public class Test {
 
 	@org.junit.Test
 	public void testExport() throws Exception {
-		ExportExcelFromObject ie = new ExportExcelFromObject();
+		ExportExcelFromObject2 ie = new ExportExcelFromObject2();
 		List<User> beans = new ArrayList<User>();
 		beans.add(new User("孙玉", 1, 22f, new Date(), new Child("小灰灰")));
 		beans.add(new User("胖子", 2, 11.0f, new Date(), new Child("哈哈哈哈")));
@@ -58,7 +58,7 @@ public class Test {
 		mapping.put("child.name", "儿子名");
 		ie.setMapping(mapping);
 		ie.setDatePattern("yyyy-MM-dd");
-		ie.exportExcel("wocao.xlsx", beans);
+		ie.exportExcel("C:\\Users\\admin_haha\\Desktop\\wocao.xlsx", beans);
 
 	}
 
